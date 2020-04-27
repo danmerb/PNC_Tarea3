@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ingreso de nuevo alumno</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link th:rel="stylesheet" th:href="@{assets/bootstrap-datepicker/css/bootstrap-datepicker.css}"/>
+    <link th:rel="stylesheet" th:href="@{assets/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{webjars/font-awesome/5.11.2/css/all.css} "/>
+</head>
+<body>
+<div class="container my-3">
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <h2>Ingresar Alumno</h2>
+				<form th:action="@{/validar}"  method="post">
+				    <div class="form-row">
+				        <div class="col-md-6 form-group">
+				            <label for="nombre">Nombres:</label>
+				            <input type="text" class="form-control" id="nombre" name="nombre">
+				        </div>
+				        <div class="col-md-6 form-group">
+				            <label for="apellido">Apellidos:</label>
+				            <input type="text" class="form-control" id="apellido" name="apellido">
+				        </div>	
+				         <div class="col-md-6 form-group">
+				            <label for="fechaNac">Fecha de Nacimiento:</label>
+				                <div class="input-group date">				                
+									<input type="date"  class="form-control" autocomplete="off" id="fechaNac" name="fechaNac"/>					                    
+				                    <div class="input-group-append">
+				                        <span class="input-group-text"><i class="far fa-calendar-alt"></i></span>
+				                    </div>
+				                </div>
+				        </div>			        
+				       
+        
+				        <div class="col-md-6 form-group">
+				            <label for="lugarNac">Lugar de nacimiento:</label>
+				            <input type="text" class="form-control" id="lugarNac" name="lugarNac">
+				        </div>
+				        
+				        <div class="col-md-6 form-group">
+				            <label for="institucion">Instituto:</label>
+				            <input type="text" class="form-control" id="institucion" name="institucion">
+				        </div>
+				        
+				        <div class="col-md-6 form-group">
+				            <label for="telefonoF">Telefono Fijo:</label>
+				            <input type="number" class="form-control" id="telefonoF" name="telefonoF">
+				        </div>
+				        
+				        <div class="col-md-6 form-group">
+				            <label for="telefonoM">Telefono Movil:</label>
+				            <input type="number" class="form-control" id="telefonoM" name="telefonoM">
+				        </div> 
+				        
+				        <button type="submit" class="btn btn-primary btn-block mt-3">Guardar alumno</button>
+         		</form>
+       	 	</div>
+    	</div>
+	</div>
+
+ 
+</body>
+</html>

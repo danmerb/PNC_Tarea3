@@ -1,0 +1,21 @@
+  
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="utf-8">
+	<title>Ingreso exitoso</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	
+</head>
+
+<body>
+	<div>
+	<h1>Alumno ingresado con éxito</h1>
+	</div>
+	<div>
+	<form th:action="@{/ingresar}">
+    	<input type="submit" class="btn btn-primary" value="Ingresar Nuevo Alumno" />
+	</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Ingreso Fallido</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+	<h1>Errores:</h1>
+	<ul>
+		<li th:each="falla : ${fallas}" th:text="${falla}"></li>
+	</ul> 
+	<div>
+	<form th:action="@{/ingresar?}">
+    	<input type="submit" class="btn btn-primary" value="Regresar" />
+	</form>
+	</div>
+	
+</body>
+</html>
